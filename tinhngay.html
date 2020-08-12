@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" id="month" placeholder="Nhập tháng">
+    <input type="button" onclick="conver()" value="Tính số ngày"><br>
+    <b id="ketqua"></b>
+    <script>
+        function conver(){
+            var month = document.getElementById("month").value;
+            var text = ""
+        switch (parseInt(month)) {
+            case 1:
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+                text = "Tháng " + month + " có 31 ngày";
+                break;
+            case 2:
+                text = "Tháng " + month + " có 29 ngày";
+                break;
+            case 3:
+            case 4:
+            case 6:
+            case 8:
+            case 9:
+            case 11:
+                text = "tháng " + month + " có 30 ngày";
+                break;
+            default:
+                text = " "
+                break;
+        };
+        document.getElementById("ketqua").innerText = text;
+        }
+    </script>
+</form>
+</body>
+</html>
